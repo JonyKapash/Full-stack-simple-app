@@ -7,7 +7,10 @@ interface MessageInputProps {
 }
 
 const MessageInput = ({ onMessageAdded }: MessageInputProps) => {
-  const [message, setMessage] = useState<Omit<Message, "id">>({ name: "", message: "" });
+  const [message, setMessage] = useState<Omit<Message, "id">>({
+    name: "",
+    message: "",
+  });
 
   const handleAddMessage = async () => {
     if (message.name && message.message) {
@@ -22,7 +25,7 @@ const MessageInput = ({ onMessageAdded }: MessageInputProps) => {
   };
 
   return (
-    <div className="flex flex-col w-full">
+    <div>
       <h3>Add new message</h3>
       <input
         type="text"

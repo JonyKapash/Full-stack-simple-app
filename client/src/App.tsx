@@ -40,12 +40,7 @@ function App() {
         {messageList.messages.map((m) => (
           <div key={m.id}>
             <strong>{m.name}:</strong> {m.message}
-            <button
-              className="bg-red-500 text-white px-2 py-1 rounded"
-              onClick={() => handleDeleteMessage(m.id)}
-            >
-              Delete
-            </button>
+            <button onClick={() => handleDeleteMessage(m.id)}>Delete</button>
           </div>
         ))}
       </div>
